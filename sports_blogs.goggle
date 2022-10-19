@@ -1,0 +1,23 @@
+! name: Sports blogs
+! description: Rerank results to boost content on sports blogs. Sports blogs from several sources. They are not vetted or endorsed by Brave.
+! public: true
+! author: 0xzh
+! avatar: #9244e0
+
+$discard
+$downrank,site=medium.com
+
+$boost=1,site=github.io
+$boost=1,site=micro.blog
+/blog.$boost=1
+/blog/$boost=1
+/engineering.$boost=2
+
+$boost=3,site=https://www.sbnation.com
+$boost=3,site=https://underdognetwork.com
+$boost=3,site=https://fivethirtyeight.com/
+$boost=3,site=https://www.si.com/
+$boost=3,site=https://www.yagersports.com/
+$boost=3,site=huntnews.co.uk
+$boost=3,site=https://hockeyfeed.com
+$boost=3,site=https://www.hockeywiz777.com/
